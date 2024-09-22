@@ -21,9 +21,10 @@ encoder = LabelEncoder()
 encoder.fit(data['prognosis'])
 
 def google_search(symptoms):
-    query = f"treatment for {symptoms}"  
+    query = f"treatment%20for%20{symptoms.replace(' ', '%20')}"  # Encoding space with %20
     url = f"https://www.google.com/search?q={query}"
     st.markdown(f"[Search Treatment for {symptoms}]({url})", unsafe_allow_html=True)
+
 
 
 
