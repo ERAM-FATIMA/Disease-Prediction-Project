@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 import webbrowser
 
 
-model_filename = 'C:/Users/HP/Documents/Project RTRP/disease_prediction_model.pkl'
+model_filename = 'disease_prediction_model.pkl'
 with open(model_filename, 'rb') as file:
     model = pickle.load(file)
 
