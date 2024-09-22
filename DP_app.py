@@ -21,9 +21,10 @@ encoder = LabelEncoder()
 encoder.fit(data['prognosis'])
 
 def google_search(symptoms):
-    query = f"treatment for {symptoms} "  
+    query = f"treatment for {symptoms}"  
     url = f"https://www.google.com/search?q={query}"
-    webbrowser.open_new_tab(url)
+    st.markdown(f"[Search Treatment for {symptoms}]({url})", unsafe_allow_html=True)
+
 
 
 st.title("Medical Assistant")
